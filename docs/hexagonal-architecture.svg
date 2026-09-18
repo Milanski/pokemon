@@ -1,0 +1,43 @@
+<svg viewBox="0 0 480 320" width="480" height="320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="480" height="320" fill="#ffffff"/>
+
+  <!-- outer hexagon: adapters / ports & adapters boundary -->
+  <polygon points="240,30 352.6,95 352.6,225 240,290 127.4,225 127.4,95"
+           fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <!-- inner hexagon: domain + application core -->
+  <polygon points="240,98 293.7,129 293.7,191 240,222 186.3,191 186.3,129"
+           fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+
+  <text x="240" y="156" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1d23">Domain</text>
+  <text x="240" y="172" text-anchor="middle" font-size="10" fill="#6b7280">+ Application</text>
+
+  <!-- zone labels -->
+  <text x="157" y="107" text-anchor="middle" font-size="10" font-style="italic" fill="#9ca3af">interface</text>
+  <text x="323" y="107" text-anchor="middle" font-size="10" font-style="italic" fill="#9ca3af">infrastructure</text>
+
+  <!-- ports (on the core hexagon's edge) -->
+  <circle cx="186.3" cy="160" r="5.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="293.7" cy="140" r="5.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="293.7" cy="180" r="5.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- plugs: adapters sit inside the outer hexagon, wired to the core's ports -->
+  <line x1="186.3" y1="160" x2="163" y2="160" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="293.7" y1="140" x2="317" y2="140" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="293.7" y1="180" x2="317" y2="180" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <text x="152" y="153" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">REST</text>
+  <text x="152" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">Controller</text>
+
+  <text x="329" y="133" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">JPA</text>
+  <text x="329" y="147" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">Adapter</text>
+
+  <text x="329" y="173" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">External</text>
+  <text x="329" y="187" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1d23">Adapter</text>
+
+  <!-- legend -->
+  <line x1="20" y1="300" x2="40" y2="300" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="45" y="303" font-size="9" fill="#6b7280">core (framework-free)</text>
+  <line x1="180" y1="300" x2="200" y2="300" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="205" y="303" font-size="9" fill="#6b7280">adapters (Spring/JPA/HTTP)</text>
+</svg>
